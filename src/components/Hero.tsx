@@ -6,9 +6,9 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#080c22]">
       {/* Background ambient glow — Dark Premium style */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-[#00d4ff]/[0.04] blur-[150px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-[#c468ff]/[0.03] blur-[120px]" />
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] sm:w-[900px] h-[400px] sm:h-[600px] rounded-full bg-[#00d4ff]/[0.04] blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[400px] sm:w-[600px] h-[300px] sm:h-[400px] rounded-full bg-[#c468ff]/[0.03] blur-[120px]" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
       </div>
 
@@ -22,12 +22,12 @@ export default function Hero() {
         </div>
 
         {/* IMMERZONE — Big wordmark with glitch on hover */}
-        <h1 className="hero-wordmark font-orbitron font-black text-7xl sm:text-8xl lg:text-[140px] tracking-[6px] leading-none text-white mb-6 cursor-default select-none">
+        <h1 className="hero-wordmark font-orbitron font-black text-[clamp(2.5rem,10vw,140px)] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] leading-none text-white mb-6 cursor-default select-none">
           IMMERZONE
         </h1>
 
         {/* Tagline — Dark Premium style */}
-        <div className="font-orbitron font-medium text-sm sm:text-base tracking-[8px] sm:tracking-[12px] uppercase text-white/40 mb-10 py-3 border-t border-b border-white/[0.06]">
+        <div className="font-orbitron font-medium text-xs sm:text-sm lg:text-base tracking-[4px] sm:tracking-[8px] lg:tracking-[12px] uppercase text-white/40 mb-10 py-3 border-t border-b border-white/[0.06]">
           DIVE INTO THE GAME
         </div>
 
@@ -37,10 +37,10 @@ export default function Hero() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-16 sm:mb-20 px-4 sm:px-0">
           <a
             href="#contact"
-            className="group flex items-center gap-2 px-8 py-4 bg-[#00d4ff]/15 hover:bg-[#00d4ff]/25 text-[#00d4ff] border border-[#00d4ff]/30 font-semibold rounded-lg transition-all"
+            className="group flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#00d4ff]/15 hover:bg-[#00d4ff]/25 text-[#00d4ff] border border-[#00d4ff]/30 font-semibold rounded-lg transition-all text-sm sm:text-base"
           >
             Request a Demo
             <ArrowRight
@@ -50,7 +50,7 @@ export default function Hero() {
           </a>
           <a
             href="#products"
-            className="flex items-center gap-2 px-8 py-4 bg-[#c468ff]/[0.08] hover:bg-[#c468ff]/15 text-[#c468ff] border border-[#c468ff]/30 font-semibold rounded-lg transition-all"
+            className="flex items-center justify-center gap-2 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 bg-[#c468ff]/[0.08] hover:bg-[#c468ff]/15 text-[#c468ff] border border-[#c468ff]/30 font-semibold rounded-lg transition-all text-sm sm:text-base"
           >
             <Play size={18} />
             Explore Products
@@ -58,14 +58,14 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-8 max-w-xl mx-auto">
+        <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto">
           {[
             { value: "50+", label: "Venues" },
             { value: "10+", label: "Countries" },
             { value: "100K+", label: "Players" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <div className="font-orbitron font-bold text-3xl sm:text-4xl text-white mb-1">
+              <div className="font-orbitron font-bold text-2xl sm:text-4xl text-white mb-1">
                 {stat.value}
               </div>
               <div className="text-sm text-gray-500 uppercase tracking-wider">

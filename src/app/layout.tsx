@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${inter.variable} h-full antialiased overflow-x-hidden`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -33,7 +33,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#0a0e1a] text-white">
+      <body className="min-h-full flex flex-col bg-[#0a0e1a] text-white overflow-x-hidden">
         {children}
       </body>
     </html>
