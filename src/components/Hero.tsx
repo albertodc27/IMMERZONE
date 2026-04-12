@@ -22,12 +22,14 @@ export default function Hero() {
         </div>
 
         {/* IMMERZONE — Big wordmark with glitch on hover */}
-        <h1 className="hero-wordmark font-orbitron font-black text-[clamp(2.5rem,10vw,140px)] tracking-[2px] sm:tracking-[4px] lg:tracking-[6px] leading-none text-white mb-6 cursor-default select-none">
-          IMMERZONE
-        </h1>
+        <div className="w-full max-w-full overflow-hidden">
+          <h1 className="hero-wordmark font-orbitron font-black text-[clamp(2rem,9vw,140px)] tracking-[1px] sm:tracking-[4px] lg:tracking-[6px] leading-none text-white mb-6 cursor-default select-none whitespace-nowrap">
+            IMMERZONE
+          </h1>
+        </div>
 
         {/* Tagline — Dark Premium style */}
-        <div className="font-orbitron font-medium text-xs sm:text-sm lg:text-base tracking-[4px] sm:tracking-[8px] lg:tracking-[12px] uppercase text-white/40 mb-10 py-3 border-t border-b border-white/[0.06]">
+        <div className="w-full max-w-full overflow-hidden font-orbitron font-medium text-[10px] sm:text-sm lg:text-base tracking-[3px] sm:tracking-[8px] lg:tracking-[12px] uppercase text-white/40 mb-10 py-3 border-t border-b border-white/[0.06]">
           DIVE INTO THE GAME
         </div>
 
