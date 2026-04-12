@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e1a;
+  --foreground: #e8ecf4;
+  --accent: #00b4ff;
+  --accent-light: #38cfff;
+  --accent-dark: #0088cc;
+  --surface: #111827;
+  --surface-light: #1a2236;
+  --muted: #64748b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-light: var(--accent-light);
+  --color-accent-dark: var(--accent-dark);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+.font-orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #00b4ff 0%, #38cfff 50%, #00e5ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-blue {
+  box-shadow: 0 0 30px rgba(0, 180, 255, 0.3), 0 0 60px rgba(0, 180, 255, 0.1);
+}
+
+.glow-blue-sm {
+  box-shadow: 0 0 15px rgba(0, 180, 255, 0.2);
+}
+
+/* Section divider gradient */
+.section-gradient {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(0, 180, 255, 0.03) 50%,
+    transparent 100%
+  );
+}
+
+/* Animated gradient border */
+.border-gradient {
+  border: 1px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(#111827, #111827),
+    linear-gradient(135deg, rgba(0, 180, 255, 0.4), rgba(0, 180, 255, 0.05));
+}
