@@ -77,3 +77,101 @@ html {
   background-image: linear-gradient(#111827, #111827),
     linear-gradient(135deg, rgba(0, 180, 255, 0.4), rgba(0, 180, 255, 0.05));
 }
+
+/* ===== HERO WORDMARK — Dark Premium with glitch on hover ===== */
+.hero-wordmark {
+  position: relative;
+  text-shadow:
+    0 0 80px rgba(0, 212, 255, 0.25),
+    0 0 160px rgba(196, 104, 255, 0.1);
+  transition: text-shadow 0.3s ease;
+}
+
+/* Glitch pseudo-layers — hidden until hover */
+.hero-wordmark::before,
+.hero-wordmark::after {
+  content: "IMMERZONE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.hero-wordmark::before {
+  color: #00d4ff;
+  z-index: -1;
+}
+
+.hero-wordmark::after {
+  color: #c468ff;
+  z-index: -1;
+}
+
+/* Hover state — activate glitch */
+.hero-wordmark:hover {
+  text-shadow:
+    3px 0 0 rgba(196, 104, 255, 0.6),
+    -3px 0 0 rgba(0, 212, 255, 0.6),
+    0 0 50px rgba(0, 212, 255, 0.4),
+    0 0 120px rgba(196, 104, 255, 0.2);
+}
+
+.hero-wordmark:hover::before {
+  opacity: 0.8;
+  animation: glitch-blue 0.3s infinite steps(2);
+}
+
+.hero-wordmark:hover::after {
+  opacity: 0.8;
+  animation: glitch-violet 0.3s infinite steps(2);
+}
+
+@keyframes glitch-blue {
+  0% {
+    transform: translate(-3px, -1px);
+    clip-path: inset(20% 0 40% 0);
+  }
+  25% {
+    transform: translate(2px, 1px);
+    clip-path: inset(60% 0 10% 0);
+  }
+  50% {
+    transform: translate(-1px, 2px);
+    clip-path: inset(10% 0 70% 0);
+  }
+  75% {
+    transform: translate(3px, -2px);
+    clip-path: inset(50% 0 20% 0);
+  }
+  100% {
+    transform: translate(-2px, 1px);
+    clip-path: inset(30% 0 50% 0);
+  }
+}
+
+@keyframes glitch-violet {
+  0% {
+    transform: translate(3px, 1px);
+    clip-path: inset(50% 0 20% 0);
+  }
+  25% {
+    transform: translate(-2px, -1px);
+    clip-path: inset(10% 0 60% 0);
+  }
+  50% {
+    transform: translate(1px, -2px);
+    clip-path: inset(70% 0 5% 0);
+  }
+  75% {
+    transform: translate(-3px, 2px);
+    clip-path: inset(15% 0 55% 0);
+  }
+  100% {
+    transform: translate(2px, -1px);
+    clip-path: inset(40% 0 30% 0);
+  }
+}
